@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Referencia al POM del Padre -->
+	<parent>
+		<groupId>com.estefania.ejemplo</groupId>
+		<artifactId>Maven_2_Herencia</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+
+	<artifactId>Maven_2_Herencia_Jar</artifactId>
+	<name>Maven_2_Herencia_Jar</name>
+</project>

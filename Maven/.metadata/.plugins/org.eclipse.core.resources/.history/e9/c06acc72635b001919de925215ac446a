@@ -1,0 +1,17 @@
+package proyecto.services;
+
+import com.estefania.ejemplo.model.Persona;
+
+public class UsarPersona {
+	
+	public void escribirPersona () {
+		
+		Persona per = new Persona ();
+		per.setId(1);
+		per.setNombre("Juan");
+		System.out.println("La persona introducida es: " + per +
+				": " + per.getId() + ", " + per.getNombre());
+	}
+		
+
+}

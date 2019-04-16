@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\Maven_2_Herencia"/>
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\Maiven_1\pom.xml"/>
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\ejemplo1"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,13 +28,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="spring"/>
+			<item value="org.Maven_2_Herencia_Jar"/>
 		</list>
 		<list key="groupId">
 			<item value="com.estefania.ejemplo"/>
 		</list>
 		<list key="artifactId">
-			<item value="ejemplo1"/>
+			<item value="Maven_2_Herencia_Jar"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -47,10 +50,20 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.estefania.ejemplo"/>
 		</list>
 		<list key="name">
+			<item value="Maven_2_Herencia_Jar"/>
+			<item value="Maven_2_Herencia_Web"/>
+			<item value="Maven_2_Herencia"/>
+			<item value="Maven_6_Documentacion"/>
 		</list>
 		<list key="artifactId">
+			<item value="Maven_2_Herencia_Jar"/>
+			<item value="Maven_2_Herencia"/>
+			<item value="Maven_2_Herencia_Web"/>
+			<item value="Maven_2_web"/>
+			<item value="Maven_6_Documentacion"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -65,7 +78,49 @@
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\Maven_6_Documentacion"/>
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\Maven_2"/>
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\Maven_1_depTransitivas\pom.xml"/>
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\maven_5_profiles"/>
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\Maiven_4_Simple_UsoDependencias"/>
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\Maven_3_simple"/>
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\Maiven_2"/>
+			<item value="C:\Users\Usuario\Desktop\Workspaces\Maven\maven_1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+			<item value="Maven_2_Herencia_Jar"/>
+			<item value="Maven_2_Herencia_Web"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
 	</section>
 </section>

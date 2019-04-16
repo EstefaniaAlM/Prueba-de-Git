@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.estefania.ejemplo</groupId>
+	<artifactId>Maven_5_Profiles</artifactId>
+	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>Maven_5_Profiles</name>
+	<description>Ejemplo de proyecto con diferentes perfiles</description>
+	<url>http://maven.apache.org</url>
+
+	<!-- Sirve para indicar la versión de JDK a utilizar -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<!-- Aquí se indica el ambiente por defecto: -->
+		<env>environment</env>
+	</properties>
+
+
+
+	<!-- Se indica cómo actuar en el MOMENTO DEL COMPILADO -->
+	<build>
+		<filters>
+			<filter>src/main/resources/${env}.properties</filter>
+		</filters>
+
+		<!-- Define cuando se ejecuta este perfil. En este caso cuando se ejecuta 
+			el objetivo (Goal) "install" -->
+		<defaultGoal>install</defaultGoal>
+
+
+		<!-- Para indicar que se tome cualquier archivo .properties y .xml -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>*.properties</include>
+					<include>*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<finalName>Maven_5_Profiles</finalName>
+
+	</build>
+
+
+	<!-- ***************************** PERFIL DE QA ****************************** -->
+	<profiles>
+		<profile>
+			<id>qa</id>
+			<properties>
+				<env>environment.qa</env>
+			</properties>
+			<build>
+				<plugins>
+					<!-- A continuación se indica el Plugin a utilizar: -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.1</version>
+						<executions>
+							<execution>
+								<!-- Aquí se indica el momento en el que se ejecuta: -->
+								<phase>test</phase>
+								
+								<!-- Se indica el objetivo (goal) -->
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<tasks>
+
+										<!-- Aquí se pone la tarea a ejecutar. En este caso un mensaje: -->
+
+										<echo>*** Se está usando el environment.qa.properties***</echo>
+									</tasks>
+								</configuration>
+
+
+							</execution>
+						</executions>
+
+					</plugin>
+				</plugins>
+			</build>
+
+		</profile>
+
+
+
+		<!-- *************************** PERFIL DE PRODUCCIÓN **************************** -->
+		<profile>
+			<id>prod</id>
+			<properties>
+				<env>environment.prod</env>
+			</properties>
+			<build>
+				<plugins>
+					<!-- A continuación se indica el Plugin a utilizar: -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>2.6</version>
+
+						<executions>
+							<execution>
+								<!-- Aquí se indica el momento en el que se ejecuta: -->
+								<phase>test</phase>
+								<configuration>
+									<tasks>
+
+										<!-- Aquí se pone la tarea a ejecutar. En este caso un mensaje: -->
+
+										<echo>*** Se está usando el environment.prod.properties***</echo>
+									</tasks>
+								</configuration>
+
+								<!-- Se indica el objetivo (goal) -->
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+
+					</plugin>
+				</plugins>
+			</build>
+
+		</profile>
+	</profiles>
+
+
+
+</project>

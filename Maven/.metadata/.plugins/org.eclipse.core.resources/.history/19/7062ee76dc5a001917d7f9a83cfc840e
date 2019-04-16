@@ -1,0 +1,14 @@
+package proyecto.services;
+
+import proyecto.model.Persona;
+
+public class UsarPersona {
+	
+	public void escribirPersona () {
+		Persona per = new Persona ();
+		per.setId(1);
+		per.setNombre("Juan");
+		System.out.println("Los datos de la persona son: " + per + per.getId() + " , " + per.getNombre());	
+	}
+
+}
